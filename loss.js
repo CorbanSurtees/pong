@@ -15,5 +15,5 @@ function loss() {
     }
 }
 function refresh() {
-    window.location.reload(true)
+    setTimeout(function(){location.reload(true);},100)
 }
