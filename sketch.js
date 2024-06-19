@@ -5,8 +5,8 @@ var b = 200; // blue
 var cr = 0; // ball red
 var cg = 0; // ball green
 var cb = 0; // ball blue
-var cwidth = 800; // Updated canvas width
-var cheight = 600; // Updated canvas height
+var cwidth = 600; // Updated canvas width
+var cheight = 400; // Updated canvas height
 
 function preload() {
 }
