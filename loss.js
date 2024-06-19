@@ -1,19 +1,29 @@
+// loss.js
 function loss() {
     if (bx <= 0 - (bd / 2) || bx >= width + (bd / 2)) {
-        noLoop() //If the ball goes off the screen
-        //Music.setVolume(50)
-        fill((r * 2) % 255, (g * 2) % 255, (b * 2) % 255)//text color 
+        noLoop(); // If the ball goes off the screen
+        // Music.setVolume(50)
+
+        // Create the result box
+        let resultBox = createDiv('');
+        resultBox.class('result-box');
+
+        let message = createElement('h1', (bx <= 0 - (bd / 2)) ? 'Player wins!' : 'Bot wins!');
+        resultBox.child(message);
+
+        let button = createButton('PLAY AGAIN?');
+        button.mousePressed(refresh);
+        button.class('play-again-button');
+        resultBox.child(button);
+
         if (bx <= 0 - (bd / 2)) {
-            text("Player wins!", 300, 150)
+            point_1 += 1; // Update score
+        } else if (bx >= width + (bd / 2)) {
+            point_2 += 1; // Update score
         }
-        if (bx >= width + (bd / 2)) {
-            text("Bot wins!", 55, 150)
-        }
-        button = createButton('PLAY AGAIN?')
-        button.position(245, 245)
-        button.mousePressed(refresh)
     }
 }
+
 function refresh() {
-    setTimeout(function(){location.reload(true);},100)
+    setTimeout(function() { location.reload(true); }, 100);
 }
