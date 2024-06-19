@@ -12,7 +12,7 @@ function setup() {
   createCanvas(cwidth, 300);
   // Music.setVolume(0.1);
   // Music.play()
-  di = round(random(0,9))
+  di = round(1)
   dy = round(random(0,9))
 }
 
