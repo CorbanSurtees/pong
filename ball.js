@@ -8,7 +8,7 @@ var ibxs = 0.0033 //X speed increase per frame
 var ibys = 0.0016 //Y speed increase per frame
 var bsx1 = 0      //Ball speed addition x
 var bsy1 = 0      //Ball speed addition y
-var bsy = 1.5      //Ball starting y speed
+var bsy = 2    //Ball starting y speed
 function ball() {
   
   if (di % 2 == 1) {
