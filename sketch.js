@@ -1,7 +1,7 @@
 // sketch.js
-var r = 50; // red
-var g = 150; // green
-var b = 200; // blue
+var r = 170; // Red component
+var g = 100; // Green component
+var b = 200; // Blue component
 var cr = 0; // ball red
 var cg = 0; // ball green
 var cb = 0; // ball blue

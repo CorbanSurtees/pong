@@ -9,6 +9,7 @@ var ibys = 0.0016 //Y speed increase per frame
 var bsx1 = 0      //Ball speed addition x
 var bsy1 = 0      //Ball speed addition y
 var bsy = 2    //Ball starting y speed
+var lastBounceTime = 0; // Timestamp of the last bounce
 function ball() {
   
   if (di % 2 == 1) {
@@ -66,8 +67,8 @@ function ball() {
   bsy1 += ibys
   //Natural increase
   // Draw the ball with a gradient fill
-  let c1 = color(255, 0, 0); // Red
-  let c2 = color(255, 255, 0); // Yellow
+  let c1 = color(128, 0, 0); // Red
+  let c2 = color(200, 0, 200); // Yellow
   let interColor = lerpColor(c1, c2, map(by, 0, height, 0, 1));
   fill(interColor);
   noStroke();
