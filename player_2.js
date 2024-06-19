@@ -5,10 +5,11 @@ var psi = 0
 var psim = 0 //Paddle 2 speed increment
 var controlY = y_2; // control y position
 function Player2() {
-    x_2 = width - 30;
+    x_2 = width - 20;
     strokeWeight(1);
     fill(0);
     rect(x_2, y_2, 20, p2h); //drawing paddle
+    psim = random(0.005,0.02)
 
     if (keyIsDown(UP_ARROW) && y_2 > 0) {
         y_2 -= 4 - psi; //move up

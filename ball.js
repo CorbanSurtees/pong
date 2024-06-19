@@ -65,7 +65,12 @@ function ball() {
   bsx1 += ibxs
   bsy1 += ibys
   //Natural increase
-  fill(150)
-  circle(bx,by,bd)
+  // Draw the ball with a gradient fill
+  let c1 = color(255, 0, 0); // Red
+  let c2 = color(255, 255, 0); // Yellow
+  let interColor = lerpColor(c1, c2, map(by, 0, height, 0, 1));
+  fill(interColor);
+  noStroke();
+  ellipse(bx, by, bd, bd);
   //Ball
 }
