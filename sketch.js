@@ -27,7 +27,5 @@ background(r, g, b);
   score()//scores
   if (bx<=cwidth/2) {
   botmove()
-  } else {
-    botmove()
   }
 }
